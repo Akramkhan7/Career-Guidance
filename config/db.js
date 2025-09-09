@@ -9,3 +9,5 @@ const mongoose = require('mongoose');
 }
 module.exports = connectDb;
 
+
+module.exports = connectDb;
