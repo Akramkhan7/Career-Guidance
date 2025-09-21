@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 const connectDb = async () => {
     try{
-        await mongoose.connect("mongodb://127.0.0.1:27017/career_guidance");
+        await mongoose.connect(`${process.env.MONGO_URI}/career_guidance`);
         console.log("Running...")
     }catch(err){
-         console.error("DB Connection Failed:", error);
+         console.error("DB Connection Failed:", err);
     }
 }
 module.exports = connectDb;
