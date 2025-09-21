@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Compass - Auth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950 to-fuchsia-900 p-6">
+  
+  <div class="relative w-full max-w-md rounded-2xl bg-white/10 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl p-8 space-y-6">
+    
+    <!-- Logo + XP -->
+    <div class="flex justify-between items-center">
+      <div class="mx-auto h-16 w-16 rounded-full bg-purple-600/20 flex items-center justify-center">
+        🚀
+      </div>
+      <span class="text-xs bg-white/10 px-2 py-1 rounded-full text-white">0 XP</span>
+    </div>
+    
+    <!-- Title -->
+    <div class="text-center">
+      <h2 class="text-2xl font-bold text-white">Career Compass</h2>
+      <p class="text-sm text-gray-300">Begin your journey to career discovery</p>
+    </div>
+    
+    <!-- Tabs -->
+    <div class="flex justify-center space-x-6 text-sm relative">
+      <button id="signInTab" class="relative px-2 text-purple-400 font-semibold pb-1 transition-all duration-300 ease-in-out">
+        Sign In
+      </button>
+      <button id="signUpTab" class="relative px-2 text-gray-400  pb-1 transition-all duration-300 ease-in-out">
+        Sign Up
+      </button>
+    </div>
+    
+    <!-- Sign In Form -->
+    <form id="signInForm" class="space-y-4">
+      <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-3xl border-white bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      <input type="password" placeholder="Password" class="w-full px-4 py-3 rounded-3xl  bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      <button class="w-full py-2  rounded-3xl bg-purple-600 hover:bg-purple-700 text-white font-semibold">Sign In</button>
+    </form>
+    
+    <!-- Sign Up Form -->
+    <form id="signUpForm" class="space-y-4 hidden">
+      <input type="text" placeholder="Full Name" class="w-full px-4 py-3 rounded-3xl bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-3xl bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      <input type="password" placeholder="Password" class="w-full px-4 py-3 rounded-3xl bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500">
+      <button class="w-full py-2 rounded-3xl bg-purple-600 hover:bg-purple-700 text-white font-semibold">Sign Up</button>
+    </form>
+    
+    <!-- Divider -->
+    <div class="flex items-center justify-center space-x-2 text-xs text-gray-400">
+      <span class="h-px w-16 bg-gray-600"></span>
+      <span>or continue with</span>
+      <span class="h-px w-16 bg-gray-600"></span>
+    </div>
+    
+    <!-- Social Login -->
+  <div class="flex space-x-6 justify-center">
+      <!-- Google -->
+      <button aria-label="Continue with Google" class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white text-2xl hover:bg-white/30 transition-shadow shadow-md" type="button" title="Google">
+        <svg class="w-5 h-5" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+          <path d="M533.5 278.4c0-17.4-1.5-34.1-4.3-50.4H272v95.4h146.9c-6.3 34-25.3 62.8-54.1 82v68h87.4c51.1-47 80.3-116.3 80.3-194.9z"/>
+          <path d="M272 544.3c73.7 0 135.6-24.4 180.8-66.3l-87.4-68c-24.3 16.3-55.3 26-93.4 26-71.7 0-132.5-48.3-154.3-113.3H28.3v70.9c45.1 89.1 137.3 150.7 243.7 150.7z"/>
+          <path d="M117.7 323.4c-10.7-31.7-10.7-65.9 0-97.6v-70.9H28.3c-38.6 75.7-38.6 165.7 0 241.4l89.4-72.9z"/>
+          <path d="M272 107.7c39.9 0 75.7 13.7 103.9 40.7l77.9-77.9C404.7 24.4 342.8 0 272 0 165.6 0 73.4 61.6 28.3 150.7l89.4 70.9c21.8-65 82.6-113.9 154.3-113.9z"/>
+        </svg>
+      </button>
+      <!-- Facebook -->
+      <button aria-label="Continue with Facebook" class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white text-2xl hover:bg-white/30 transition-shadow shadow-md" type="button" title="Facebook">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.325v21.351C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.116C23.4 24 24 23.4 24 22.675V1.325C24 .6 23.4 0 22.675 0z"/>
+        </svg>
+      </button>
+      <!-- GitHub -->
+      <button aria-label="Continue with GitHub" class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-white text-2xl hover:bg-white/30 transition-shadow shadow-md" type="button" title="GitHub">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.372 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.76-1.605-2.665-.304-5.466-1.334-5.466-5.933 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.22 0 4.61-2.804 5.625-5.475 5.922.43.37.823 1.102.823 2.222v3.293c0 .32.218.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Explore as Guest -->
+    <div class="text-center">
+      <button class="w-full py-2 rounded-lg border border-white/30 bg-white/10 hover:bg-white/20 text-white flex items-center justify-center space-x-2">
+        <span>🔍</span><span>Explore as Guest</span>
+      </button>
+      <p class="text-xs text-purple-300 mt-2">✨ New users get 100 bonus XP</p>
+    </div>
+  </div>
+
+<script src="/public/js/script.js"></script>
+</body>
+</html>
